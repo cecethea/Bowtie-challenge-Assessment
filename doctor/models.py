@@ -98,16 +98,6 @@ class Address(DateMixin):
 class Doctor(Address, DateMixin):
     """Model for doctor"""
 
-    LANGUAGE_CHOICES = (
-        ("English", _("English")),
-        ("French", _("French")),
-        ("German", _("German")),
-        ("Spanish", _("Spanish")),
-        ("Italian", _("Italian")),
-        ("Russian", _("Russian")),
-        ("Chinese", _("Chinese")),
-    )
-
     first_name = models.CharField(
         max_length=45,
         blank=False,
@@ -144,8 +134,7 @@ class Doctor(Address, DateMixin):
 
     language = models.CharField(
         max_length=45,
-        choices=LANGUAGE_CHOICES,
-        blank=False,
+        blank=True,
         verbose_name=_("Languages"),
     )
 

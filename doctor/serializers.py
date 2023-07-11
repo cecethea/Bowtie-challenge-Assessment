@@ -5,7 +5,7 @@ from doctor.models import Doctor, DoctorSchedule
 class DoctorScheduleSerializer(serializers.ModelSerializer):
     class Meta:
         model = DoctorSchedule
-        fields = ['day', 'start_time', 'end_time']
+        fields = ['day', 'start_time', 'end_time', 'doctor']
 
 
 class DoctorSerializer(serializers.ModelSerializer):
@@ -21,8 +21,11 @@ class DoctorSerializer(serializers.ModelSerializer):
             'consultation_fee',
             'membership_exclusive_price',
             'language',
+            'country',
+            'city',
             'district',
             'address_line1',
+            'postal_code',
             'timezone',
             "latitude",
             "longitude",
