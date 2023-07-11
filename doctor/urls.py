@@ -23,8 +23,8 @@ router = OptionalSlashDefaultRouter()
 # ie: router.registry.extend(app_router.registry)
 
 # Main application routes
-router.register('doctor', views.DoctorViewSet) 
-router.register('schedule', views.DoctorScheduleViewSet)
+router.register('doctor', views.DoctorViewSet, basename='doctor')
+router.register('schedule', views.DoctorScheduleViewSet, basename='schedule')
 
 urlpatterns = [
     path('', include(router.urls)),  # includes router generated URL

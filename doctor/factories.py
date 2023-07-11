@@ -21,8 +21,8 @@ class DoctorFactory(DjangoModelFactory):
     email = factory.Faker('email')
     phone_number = factory.Faker('phone_number')
     speciality = factory.Faker('job')
-    price = factory.Faker('pydecimal', left_digits=5, right_digits=2, positive=True)
-    membership_exclusive_price = factory.Faker('pystr', max_chars=45)
+    consultation_fee = factory.Faker('pydecimal', left_digits=5, right_digits=2, positive=True)
+    membership_exclusive_price = factory.Faker('pydecimal', left_digits=5, right_digits=2, positive=True)
     language = factory.Faker(
         'random_element',
         elements=['English', 'French', 'German', 'Spanish', 'Italian', 'Russian', 'Chinese']
