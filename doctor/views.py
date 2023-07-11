@@ -36,7 +36,7 @@ class DoctorViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(language=language)
 
         # Retrieve related schedules for each doctor
-        queryset = queryset.prefetch_related('doctorschedule_set')
+        # queryset = queryset.prefetch_related('schedule_set')
 
         print(queryset.query)
 

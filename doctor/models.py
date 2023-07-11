@@ -172,7 +172,8 @@ class DoctorSchedule(DateMixin):
 
     doctor = models.ForeignKey(
         Doctor,
-        verbose_name=_("Schedule"),
+        verbose_name=_("Doctor"),
+        related_name='schedules',
         on_delete=models.CASCADE,
     )
 
