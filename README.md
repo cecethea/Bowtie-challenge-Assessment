@@ -101,5 +101,3 @@ and validate coding style (pycodestyle). You can use it after making changes to 
 ```
 python tests.py
 ```
-
-This script executes the exact same thing that would be executed by the Travis CI and Coveralls.
