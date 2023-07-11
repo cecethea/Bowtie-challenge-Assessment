@@ -3,9 +3,11 @@ from rest_framework.pagination import LimitOffsetPagination
 from doctor.models import Doctor, DoctorSchedule
 from doctor.serializers import DoctorSerializer, DoctorScheduleSerializer
 
+
 class DoctorScheduleViewSet(viewsets.ModelViewSet):
     queryset = DoctorSchedule.objects.all()
     serializer_class = DoctorScheduleSerializer
+
 
 class DoctorViewSet(viewsets.ModelViewSet):
     queryset = Doctor.objects.all()

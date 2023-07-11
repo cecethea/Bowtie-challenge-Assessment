@@ -2,6 +2,7 @@ import factory
 from factory.django import DjangoModelFactory
 from .models import Doctor, DoctorSchedule
 
+
 class DoctorFactory(DjangoModelFactory):
     class Meta:
         model = Doctor
@@ -23,9 +24,10 @@ class DoctorFactory(DjangoModelFactory):
     price = factory.Faker('pydecimal', left_digits=5, right_digits=2, positive=True)
     membership_exclusive_price = factory.Faker('pystr', max_chars=45)
     language = factory.Faker(
-        'random_element', 
+        'random_element',
         elements=['English', 'French', 'German', 'Spanish', 'Italian', 'Russian', 'Chinese']
     )
+
 
 class DoctorScheduleFactory(DjangoModelFactory):
     class Meta:
@@ -33,7 +35,7 @@ class DoctorScheduleFactory(DjangoModelFactory):
 
     doctor = factory.SubFactory(DoctorFactory)
     day = factory.Faker(
-        'random_element', 
+        'random_element',
         elements=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     )
     start_time = factory.Faker('time')
