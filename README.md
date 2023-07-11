@@ -100,11 +100,10 @@ password: Test1234@
 ```
 - The admin site: [http://localhost:8000/admin/](http://localhost:8000/admin),
 
-### Test your changes
+### Test 
 
-A python scripts has been created to easily run all unit tests, get code coverage
-and validate coding style (pycodestyle). You can use it after making changes to the API:
+You can run the tests with:
 
 ```
-python tests.py
+python manage.py test
 ```
