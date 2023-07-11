@@ -91,6 +91,13 @@ python manage.py runserver
 You can now visit these links to validate the installation:
 
 - The root of the API: [http://localhost:8000/](http://localhost:8000/),
+
+use the following credential to access the admin site:
+```
+username: test
+
+password: Test1234@
+```
 - The admin site: [http://localhost:8000/admin/](http://localhost:8000/admin),
 
 ### Test your changes
